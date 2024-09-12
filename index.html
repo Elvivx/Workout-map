@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- leaflet api -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Zoomer</title>
+</head>
+
+<body>
+    <main>
+        <section class="app">
+            <div class="logo">
+                <img src="icons8-location-96.png" alt="">
+                <h1>Zoomer</h1>
+            </div>
+
+            <div class="app-data">
+                <div class="input-exercise">
+                    <form action="" class="hide">
+                        <label for="options">Type</label>
+                        <select name="options" id="options" class="inputs select">
+                            <option value="Running">Running</option>
+                            <option value="Cycling">Cycling</option>
+                        </select>
+
+                        <label for="distance">Distance</label>
+                        <input class="inputs distance" type="text" name="distance" placeholder="km" maxlength="3"
+                            required>
+
+                        <label for="duration">Duration</label>
+                        <input class="inputs duration" type="text" name="duration" placeholder="mins" maxlength="3"
+                            required>
+
+                        <label for="candence">candence</label>
+                        <input class="inputs candence" type="text" name="candence" placeholder="steps/min" maxlength="3"
+                            required>
+                        <button type="submit" class='submit'></button>
+                    </form>
+
+                </div>
+
+                <div class="workouts" data-cord=" [erer]">
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>
+                    &copy; This is the property of of the zoomers coporation and is not to be tampered with or
+                    legalconsequences will be applied to whoever!
+                    <br>
+                    But seriously don't.
+                </p>
+            </div>
+        </section>
+
+        <!-- <div class="color"></div> -->
+        <section id="map"></section>
+    </main>
+
+    <section class="mobile">
+        <h2>Open in Desktop mode to view!</h2>
+    </section>
+    <script src="logic.js"></script>
+</body>
+
+</html>

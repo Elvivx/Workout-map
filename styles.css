@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Cambria Math";
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(350px, 500px) minmax(500px, 1.2fr);
+  padding: 30px;
+  height: 100dvh !important;
+}
+main .app {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(350px, 1fr);
+  grid-template-rows: 97px 1fr 100px;
+  background: rgb(48, 67, 74);
+  height: 100%;
+}
+main .app .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+main .app .logo h1 {
+  color: white;
+  font-size: 34px;
+  margin: 0;
+  text-transform: lowercase;
+}
+main .app .app-data {
+  width: 100%;
+  height: 100%;
+  max-height: 810px;
+  overflow-y: scroll;
+  padding: 2rem 3rem;
+}
+main .app .app-data::-webkit-scrollbar {
+  width: 0px;
+}
+main .app .app-data .input-exercise {
+  width: 100%;
+  transition: all 250ms ease-in-out;
+}
+main .app .app-data .input-exercise form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 18px 20px;
+  border-radius: 5px;
+  gap: 10px;
+  color: aliceblue;
+  background: rgb(56, 63, 69);
+  transition: all 0.5s;
+}
+main .app .app-data .input-exercise form label {
+  font-family: "Impact";
+}
+main .app .app-data .input-exercise form .inputs {
+  width: 90px;
+  border-radius: 3px;
+  border: 0;
+  outline: 0;
+  padding: 5px;
+  background: rgb(233, 245, 255);
+}
+main .app .app-data .input-exercise form select option:hover {
+  background: grey !important;
+}
+main .app .app-data .input-exercise form .submit {
+  display: none;
+}
+main .app .app-data .input-exercise .hide {
+  height: 0px;
+  padding: 0;
+  overflow: hidden;
+}
+main .app .app-data .workout {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  color: aliceblue;
+  margin-top: 10px;
+}
+main .app .app-data .workout .info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: rgb(90, 97, 101);
+  width: 100%;
+  padding: 20px;
+  gap: 10px;
+}
+main .app .app-data .workout .info h3 {
+  margin: 0;
+  grid-column: 1/-1;
+}
+main .app .app-data .workout .info div {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
+main .app .app-data .workout .info div p {
+  margin: 0;
+}
+main .app .app-data .workout .info div :last-child {
+  color: rgb(169, 170, 170);
+}
+main .app .app-data .running {
+  border-left: 5px solid #4ac46c;
+}
+main .app .app-data .cycling {
+  border-left: 5px solid orange;
+}
+main .app .footer {
+  padding: 10px;
+}
+main .app .footer p {
+  text-align: center;
+  color: white;
+}
+main #map {
+  background: gray;
+}
+main #map .leaflet-popup-content-wrapper {
+  background: 0;
+  border-radius: 5px;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+main #map .leaflet-popup-content-wrapper .leaflet-popup-content {
+  color: aliceblue;
+  margin: 0;
+}
+main #map .leaflet-popup-content-wrapper .leaflet-popup-content .info {
+  width: 255px;
+  border-radius: 5px;
+  padding: 20px;
+  background: #1b383d;
+}
+main #map .leaflet-popup-content-wrapper .leaflet-popup-content .info h3 {
+  margin: 0;
+}
+main #map .leaflet-popup-tip {
+  background: #1b383d;
+}
+main #map .running {
+  border-left: 5px solid #4ac46c;
+}
+main #map .cycling {
+  border-left: 5px solid orange;
+}
+
+.mobile {
+  display: none;
+  width: 100%;
+  height: 100dvh;
+}
+.mobile h2 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+    display: none;
+  }
+  main .app {
+    grid-template-rows: 90px 400px 80px;
+  }
+  .mobile {
+    display: block;
+  }
+}/*# sourceMappingURL=styles.css.map */
